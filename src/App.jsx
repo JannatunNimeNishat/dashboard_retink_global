@@ -5,6 +5,7 @@ import content from './assets/side_bar/ContentViewGallery.png'
 import setting from './assets/side_bar/Settings.png';
 import logout from './assets/side_bar/logout.png';
 import Navbar from './components/Navbar';
+import Banner from './components/Banner';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           {/* Page content here */}
           <label htmlFor=" my-drawer-2" className=" btn btn-primary drawer-button lg:hidden">Open drawer</label>
           <Navbar />
-
+          <Banner/>
 
         </div>
         <div className="drawer-side border">

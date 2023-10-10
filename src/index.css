@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner-gradient {
+    background: radial-gradient(86.71% 86.73% at 50% 45.52%, #FFF 39.72%, #DCD1FF 100%);
+}
+
+.glass {
+    display: flex;
+    width: 637px;
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-items: center; */
+    gap: 14px;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+}
+
