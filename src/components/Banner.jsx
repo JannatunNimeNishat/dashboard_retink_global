@@ -23,7 +23,7 @@ const Banner = () => {
                     <p className="">Try our SEO optimization tool to increase engagement by 40% 🔥</p>
                 </div>
             </div>
-            <button className="absolute bottom-11 left-5 w-[201px] h-[48px] flex items-center py-[13px] px-[48px] rounded-[20px] border-[2px] border-[#754DE8] text-[16px] text-[#754DE8] font-semibold hover:bg-[#754DE8] hover:text-white delay-75 duration-75 ">Start Crating</button>
+            <button className="absolute bottom-11 left-5 w-[201px] h-[48px] flex items-center py-[13px] px-[48px] rounded-[20px] border-[2px] border-[#754DE8] text-[16px] text-[#754DE8] font-semibold hover:bg-[#754DE8] hover:text-white delay-75 duration-100 transition ease-in-out    hover:scale-105   ">Start Crating</button>
 
             <img className='absolute top-0 right-0 bottom-0 z-auto ' src={blend_img} alt="" />
             <img className='absolute  right-[56px] bottom-0 z-10 ' src={glob_img} alt="" />

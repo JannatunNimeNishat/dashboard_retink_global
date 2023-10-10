@@ -26,7 +26,9 @@ const Navbar = () => {
 
                 <div className='flex items-center gap-4'>
                     {/* button */}
-                    <button className='w-[189px] h-[40px] rounded-[18px] text-white text-[13px] font-medium bg-[#754DE8]'>Create Content</button>
+                    <button className='w-[189px] h-[40px] rounded-[18px] text-white text-[13px] font-medium bg-[#754DE8]
+                     transition ease-in-out delay-75   hover:scale-105  duration-200
+                    '>Create Content</button>
                     {/*  */}
                     <div className='bg-[#F1EDFD] rounded-[15px] w-[78px] h-[39px] shadow-[0_7px_20px_0_rgba(0,0,0,0.07)]   flex items-center justify-center gap-1'>
                         <img src={coin_icon} alt="" />

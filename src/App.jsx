@@ -6,6 +6,7 @@ import setting from './assets/side_bar/Settings.png';
 import logout from './assets/side_bar/logout.png';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
+import SocialMedia from './components/SocialMedia';
 
 function App() {
 
@@ -14,11 +15,17 @@ function App() {
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         {/* <div className="drawer-content flex flex-col items-center justify-center"> */}
-        <div className="drawer-content  min-h-full">
+        <div className="drawer-content  min-h-full min-w-full">
           {/* Page content here */}
           <label htmlFor=" my-drawer-2" className=" btn btn-primary drawer-button lg:hidden">Open drawer</label>
           <Navbar />
-          <Banner/>
+          <Banner />
+          <div className='py-[17px] px-[14px] text-[#4D4959]'>
+            <h3 className='text-[27px] font-semibold'>Most Popular Tools</h3>
+            <p className='text-[18px]'>Explore the trending tools to create your copies fast</p>
+          </div>
+          <SocialMedia />
+          {/* <SocialMedia /> */}
 
         </div>
         <div className="drawer-side border">
