@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
+   
     return (
         <>
             {/* navbar lg  */}
@@ -64,14 +64,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* navbar sm */}
-            {/*  <div className='flex justify-between lg:hidden w-[342px] h-[40px]'>
-                <img htmlFor="my-drawer-2" src={sm_menu_icon} alt="" />
-                <select name="" id="" className="w-[140px] h-[38px] px-2 py-1 bg-white rounded-[10px] z-10">
-                    <option className="text-[14px] font-normal" value="Zara ventures">Zara ventures</option>
-                </select>
-                <img className='cursor-pointer' src={avatar_icon} alt="" />
-            </div> */}
+            
         </>
     );
 };

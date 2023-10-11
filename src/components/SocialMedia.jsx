@@ -120,28 +120,7 @@ const SocialMedia = () => {
 
 
 
-            {/*  <p className="text-[#4D4959] text-[20px] py-2">Social media</p>
-            <div className="grid grid-cols-4 gap-2  ">
-                {
-                    data.map(item =>
-                        <div
-                            key={item.id}
-                            className="bg-white pt-[14px] pr-[20px] pb-[30px] ps-[22px] rounded-[10px]
-                        transition ease-in-out delay-75   hover:scale-105  duration-200 cursor-pointer mx-3
-                        "
-                        >
-                            <div className="flex justify-between items-center">
-                                <img className='cursor-pointer transition ease-in-out delay-75   hover:scale-150  duration-200' src={item.edit_img} alt="" />
-                                <img className='cursor-pointer transition ease-in-out delay-75   hover:scale-150  duration-200' src={item.trending} alt="" />
-                            </div>
-                            <div className="mt-3 mb-2">
-                                <h3 className="text-[20px] font-semibold py-2">{item.title}</h3>
-                                <p className="text-[16px] font-semibold">{item.desc}</p>
-                            </div>
-                        </div>)
-                }
-            </div> */}
-
+          
 
 
         </div>

@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import { useContext, useState } from 'react';
-import { FaGoogle, FaGithub } from 'react-icons/fa'
+import { FaGoogle } from 'react-icons/fa'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
 import Lottie from "lottie-react";
@@ -27,7 +27,7 @@ const Login = () => {
         onSubmit: (values, target) => {
             const email = values.email;
             const password = values.password;
-            //console.log(email,password);
+            
             setLoginError('')
             //
             login(email, password)

@@ -32,10 +32,7 @@ function App() {
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content   min-h-full min-w-full">
-          {/* Page content here */}
-          {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
-
-
+          
           {/* navbar sm */}
           {<div className='flex justify-between items-center lg:hidden px-8 py-10 z-10 bg-transparent gap-10 fixed h-[40px]'>
             <label htmlFor="my-drawer-2" className="lg:hidden w-[40px] h-[40px] flex items-center justify-center bg-[rgba(255,255,255,0.58)] rounded-[12px] ">
@@ -46,11 +43,10 @@ function App() {
             </select>
             <img className='cursor-pointer' src={avatar_icon} alt="" />
           </div>}
-
           {/* navbar lag */}
           <Navbar />
-
           <Banner />
+
           <div className='pt-[37px] pb-[10px] lg:pt-[17px] lg:pb-[17px] px-5  text-[#4D4959]'>
             <h3 className='text-18px] lg:text-[27px] font-semibold'>Most Popular Tools</h3>
             <p className='text-[14px] lg:text-[18px]'>Explore the trending tools to create your copies fast</p>
@@ -58,9 +54,7 @@ function App() {
           <SocialMedia />
 
           {/* floating btn */}
-
           <Container className=" lg:hidden ">
-
             <Button
               icon="fas fa-plus"
               className="rounded-2xl text-2xl "
@@ -68,9 +62,8 @@ function App() {
             >+</Button>
           </Container>
 
-
-
         </div>
+        
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 w-[110px] min-h-full bg-base-200 text-base-content 
