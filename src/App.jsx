@@ -3,21 +3,30 @@ import sidebar_img_1 from './assets/side_bar/btn-1.png'
 import home from './assets/side_bar/Home.png'
 import content from './assets/side_bar/ContentViewGallery.png'
 import setting from './assets/side_bar/Settings.png';
-import logout from './assets/side_bar/logout.png';
+import logout_img from './assets/side_bar/logout.png';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import SocialMedia from './components/SocialMedia';
-import { useContext } from 'react';
-import { AuthContext } from './provider/AuthProvider';
+
 
 import sm_menu_icon from './assets/navbar/sm/ep_menu.png'
 import avatar_icon from './assets/navbar/avatar.png'
 
-import { Container, Button, purple, lightColors, darkColors } from 'react-floating-action-button'
+import { Container, Button, lightColors, darkColors } from 'react-floating-action-button'
+import { useContext } from 'react';
+import { AuthContext } from './provider/AuthProvider';
+
 
 function App() {
-  const { sidebar } = useContext(AuthContext);
-  console.log('sidebar', sidebar);
+  const { logOut } = useContext(AuthContext);
+ 
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        
+      })
+      .catch((error) => { console.log(error) })
+  }
   return (
     <>
       <div className="drawer lg:drawer-open">
@@ -49,15 +58,15 @@ function App() {
           <SocialMedia />
 
           {/* floating btn */}
-    
+
           <Container className=" lg:hidden ">
-           
+
             <Button
-                icon="fas fa-plus"
-                className="rounded-2xl text-2xl "
-                styles={{backgroundColor: darkColors.purple, color: lightColors.white}}
-                >+</Button>
-        </Container>
+              icon="fas fa-plus"
+              className="rounded-2xl text-2xl "
+              styles={{ backgroundColor: darkColors.purple, color: lightColors.white }}
+            >+</Button>
+          </Container>
 
 
 
@@ -75,7 +84,9 @@ function App() {
             </div>
             <div className=''>
               <li className=''><img className='object-contain p-[10px]' src={setting} alt="" /></li>
-              <li className=' mt-[45px]   rounded-[15px] '><img className='object-contain p-[24px]' src={logout} alt="" /></li>
+              <li className=' mt-[45px]   rounded-[15px] '
+                onClick={handleLogOut}
+              ><img className='object-contain p-[24px]' src={logout_img} alt="" /></li>
             </div>
           </ul>
 

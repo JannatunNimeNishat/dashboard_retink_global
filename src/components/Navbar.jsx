@@ -6,12 +6,16 @@ import coin_icon from '../assets/navbar/coin.png'
 import calendar_icon from '../assets/navbar/Calendar.png'
 import alert_icon from '../assets/navbar/Alert.png'
 import avatar_icon from '../assets/navbar/avatar.png'
+import { useContext } from 'react'
+import { AuthContext } from '../provider/AuthProvider'
+import { Link } from 'react-router-dom'
 
 
 
 
 const Navbar = () => {
-    
+    const { user } = useContext(AuthContext);
+    console.log(user);
     return (
         <>
             {/* navbar lg  */}
@@ -47,12 +51,21 @@ const Navbar = () => {
                 <div className="bg-[#F1EDFD] w-[250px] flex items-center justify-between px-3 py-1 ">
                     <img className='cursor-pointer' src={calendar_icon} alt="" />
                     <img className='cursor-pointer' src={alert_icon} alt="" />
-                    <img className='cursor-pointer' src={avatar_icon} alt="" />
+
+                    {
+                        user ?
+                              <img className='cursor-pointer w-[42px] h-[42px]' src={user?.photoURL||  avatar_icon} alt="" />
+                                
+                            :
+                            <Link to='/login' className='rounded-[18px] px-5 py-2 text-white text-[13px] font-medium bg-[#754DE8]
+                            transition ease-in-out delay-75   hover:scale-105  duration-200'>Login</Link>
+                    }
+
                 </div>
             </div>
 
             {/* navbar sm */}
-           {/*  <div className='flex justify-between lg:hidden w-[342px] h-[40px]'>
+            {/*  <div className='flex justify-between lg:hidden w-[342px] h-[40px]'>
                 <img htmlFor="my-drawer-2" src={sm_menu_icon} alt="" />
                 <select name="" id="" className="w-[140px] h-[38px] px-2 py-1 bg-white rounded-[10px] z-10">
                     <option className="text-[14px] font-normal" value="Zara ventures">Zara ventures</option>
